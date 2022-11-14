@@ -1,0 +1,66 @@
+.input-container {
+  width: 18em;
+  margin: auto;
+  margin-top: 10vh;
+  border: solid 1px #87ceeb;
+  border-radius: 10px;
+}
+.description {
+  padding: 1em;
+  background-color: #87ceeb;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+.error {
+  padding-top: 0.5em;
+  color: #ff0000;
+  text-align: center;
+}
+.input {
+  padding: 0.8em;
+  text-align: center;
+}
+.btn {
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+.result-area {
+  display: none;
+  padding-top: 3em;
+  text-align: center;
+}
+.result-area.show {
+  display: block;
+}
+.img-container {
+  max-width: 18em;
+  max-height: 18em;
+  width: 80%;
+  height: 80vw;
+  background-size: cover;
+  margin: auto;
+}
+.img-container.sun {
+  background-image: url("../img/sun.png");
+}
+.img-container.earth {
+  background-image: url("../img/earth.png");
+}
+.img-container.moon {
+  background-image: url("../img/moon.png");
+}
+.text {
+  padding-bottom: 1em;
+}
+.result {
+  font-size: 2em;
+}
+.result.sun {
+  color: #c30101;
+}
+.result.earth {
+  color: #0101cb;
+}
+.result.moon {
+  color: #cfcf01;
+}
