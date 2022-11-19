@@ -235,6 +235,15 @@
   </body>
   <script src="./info.js"></script>
   <script>
+    function resetColor(text) {
+      for (const key in katakana) {
+        if (key != text) {
+          $(".result").removeClass(key);
+          $(".img-container").removeClass(key);
+        }
+      }
+    }
+
     $(".btn").click(function () {
       let year = $("#year").val();
       let month = $("#month").val();
@@ -250,23 +259,25 @@
       if (n < 0) {
         n = 60 + n;
       }
-      const text = types[colors[n]];
+      const text = colors[n];
+      resetColor(text);
       $(".result-area").addClass("show");
-      $(".result").text(majuscule[text]);
+      $(".result").text(katakana[text]);
       $(".result").addClass(text);
       $(".img-container").addClass(text);
-    });
 
-    const url =
-      "https://script.google.com/macros/s/AKfycbw2YTHGwKDHurGw8xKKMFaOOCHi3-LtNlPwK-wz5PWU4NzeV9IckUrwi_XYhoNz1dfe/exec";
-    $.ajax({
-      url: url,
-    })
-      .done(function (res) {
-        $(".link").attr("href", res);
+      const url =
+        "https://script.google.com/macros/s/AKfycbyf_yY7UWcmOExeBzlSQeahusR77FucxgdzbSDZeXxLe0ldnAA2CvQEZTPII3HmfAMRUw/exec?color=" +
+        text;
+      $.ajax({
+        url: url,
       })
-      .fail(function (jqXHR, status) {
-        $(".link").html("<li>読み込みに失敗しました。</li>");
-      });
+        .done(function (res) {
+          $(".link").attr("href", res);
+        })
+        .fail(function (jqXHR, status) {
+          $(".link").html("<p>読み込みに失敗しました。</p>");
+        });
+    });
   </script>
 </html>

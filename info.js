@@ -79,3 +79,17 @@ const majuscule = {
   earth: "EARTH",
   moon: "MOON",
 };
+const katakana = {
+  yellow: "イエロー",
+  yellowgreen: "イエローグリーン",
+  green: "グリーン",
+  blue: "ブルー",
+  orange: "オレンジ",
+  bluegreen: "ブルーグリーン",
+  turquoise: "ターコイズ",
+  magenta: "マゼンダ",
+  red: "レッド",
+  redorange: "レッドオレンジ",
+  indigo: "インディゴ",
+  purple: "パープル",
+};
