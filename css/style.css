@@ -2,12 +2,12 @@
   width: 18em;
   margin: auto;
   margin-top: 10vh;
-  border: solid 1px #87ceeb;
+  border: solid 1px #ffeb07;
   border-radius: 10px;
 }
 .description {
   padding: 1em;
-  background-color: #87ceeb;
+  background-color: #ffeb07;
   color: #fff;
   border-radius: 10px 10px 0 0;
 }
