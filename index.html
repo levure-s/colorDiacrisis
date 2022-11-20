@@ -268,6 +268,11 @@
       $(".result").addClass(text);
       $(".img-container").addClass(text);
 
+      if ($(window).width() < 480) {
+        $(".link-container").remove();
+        return;
+      }
+
       const url =
         "https://script.google.com/macros/s/AKfycbyf_yY7UWcmOExeBzlSQeahusR77FucxgdzbSDZeXxLe0ldnAA2CvQEZTPII3HmfAMRUw/exec?color=" +
         text;
@@ -277,10 +282,6 @@
         .done(function (res) {
           $(".link-container").html('<a href="" class="link">結果を見る</a>');
           $(".link").attr("href", res);
-          if ($(window).width() < 480) {
-            $(".link").attr("target", "_blank");
-            $(".link").attr("rel", "noopener");
-          }
         })
         .fail(function (jqXHR, status) {
           $(".link-container").html("<p>読み込みに失敗しました。</p>");
